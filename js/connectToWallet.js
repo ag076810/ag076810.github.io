@@ -64,8 +64,8 @@ async function onConnect() {
     console.log(networkId)
     if (networkId == 10001 {
         document.getElementById("network").innerHTML = "BCH Test net";
-    } else if (networkId == 56) {
-        document.getElementById("network").innerHTML = "Main net";
+    } else if (networkId == 10001) {
+        document.getElementById("network").innerHTML = "BCH Test net";
     }
     connectToContract();
 
@@ -126,11 +126,11 @@ async function connectToContract() {
         web3 = new Web3("http://35.220.203.194:8545/");
         contractAddress = "0xd718CaF10B1D84D82f9C52e58eb2cDF5e13DC27E";
         hrefBscscan = "https://www.smartscan.cash/"
-    } else if (networkId === 56) {
-        document.getElementById("network").innerHTML = "Main 11 net";
-        web3 = new Web3("https://bsc-dataseed.binance.org/");
+    } else if (networkId === 10001) {
+        document.getElementById("network").innerHTML = "Main BCH net";
+        web3 = new Web3("http://35.220.203.194:8545/");
         contractAddress = "0xd718CaF10B1D84D82f9C52e58eb2cDF5e13DC27E";
-        hrefBscscan = "https://testnet.bscscan.com"
+        hrefBscscan = "https://www.smartscan.cash/"
         //hrefBscscan=https://bscscan.com
     } else {
         alert("Please change your network provider to the Binance Smart Chain (or testnet)");
