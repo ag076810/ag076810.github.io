@@ -12,6 +12,7 @@ let contract;
 let hrefBscscan = "https://www.smartscan.cash";
 let lastClicked = "empty";
 // Chosen wallet provider given by the dialog window
+//
 let provider;
 
 // Address of the selected account
