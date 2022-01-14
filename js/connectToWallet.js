@@ -60,7 +60,7 @@ async function onConnect() {
     web3wallet = new Web3(window.ethereum);
     networkId = await web3wallet.eth.net.getId();
     console.log(networkId)
-    if (networkId == 10001 {
+    if (networkId == 10001) {
         document.getElementById("network").innerHTML = "BCH Test net";
     } else if (networkId == 10000) {
         document.getElementById("network").innerHTML = "BCH net";
