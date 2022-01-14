@@ -124,12 +124,12 @@ async function connectToContract() {
     if (networkId === 10001) {
         document.getElementById("network").innerHTML = "Test BCH net";
         web3 = new Web3("http://35.220.203.194:8545/");
-        contractAddress = "0x5476Eab39A84210F94aF6B8C8f94b8fAF75D814F";
+        contractAddress = "0xd718CaF10B1D84D82f9C52e58eb2cDF5e13DC27E";
         hrefBscscan = "https://www.smartscan.cash/"
     } else if (networkId === 56) {
         document.getElementById("network").innerHTML = "Main 11 net";
         web3 = new Web3("https://bsc-dataseed.binance.org/");
-        contractAddress = "0x5476Eab39A84210F94aF6B8C8f94b8fAF75D814F";
+        contractAddress = "0xd718CaF10B1D84D82f9C52e58eb2cDF5e13DC27E";
         hrefBscscan = "https://testnet.bscscan.com"
         //hrefBscscan=https://bscscan.com
     } else {
