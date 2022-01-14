@@ -12,7 +12,6 @@ let contract;
 let hrefBscscan = "https://www.smartscan.cash";
 let lastClicked = "empty";
 // Chosen wallet provider given by the dialog window
-//
 let provider;
 
 // Address of the selected account
@@ -127,9 +126,9 @@ async function connectToContract() {
         web3 = new Web3("http://35.220.203.194:8545/");
         contractAddress = "0xf0bF9d19C0d15e00eD17427CdD91a79797C69D01";
         hrefBscscan = "https://www.smartscan.cash"
-    } else if (networkId === 10001) {
+    } else if (networkId === 10000) {
         document.getElementById("network").innerHTML = "Main BCH net";
-        web3 = new Web3("http://35.220.203.194:8545/");
+        web3 = new Web3("https://smartbch.greyh.at/");
         contractAddress = "0xf0bF9d19C0d15e00eD17427CdD91a79797C69D01";
         hrefBscscan = "https://www.smartscan.cash"
         //hrefBscscan=https://bscscan.com
