@@ -7,10 +7,7 @@ const evmChains = window.evmChains;
 let web3Modal;
 let web3, web3wallet;
 let contract;
-//let hrefBscscan =https://bscscan.com;
-//let hrefBscscan = "https://testnet.bscscan.com";
 let hrefBscscan = "https://www.smartscan.cash";
-//
 let lastClicked = "empty";
 // Chosen wallet provider given by the dialog window
 let provider;
@@ -65,8 +62,8 @@ async function onConnect() {
     console.log(networkId)
     if (networkId == 10001 {
         document.getElementById("network").innerHTML = "BCH Test net";
-    } else if (networkId == 10001) {
-        document.getElementById("network").innerHTML = "BCH Test net";
+    } else if (networkId == 10000) {
+        document.getElementById("network").innerHTML = "BCH net";
     }
     connectToContract();
 
