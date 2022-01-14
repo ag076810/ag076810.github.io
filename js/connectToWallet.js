@@ -10,6 +10,7 @@ let contract;
 //let hrefBscscan =https://bscscan.com;
 //let hrefBscscan = "https://testnet.bscscan.com";
 let hrefBscscan = "https://www.smartscan.cash";
+//
 let lastClicked = "empty";
 // Chosen wallet provider given by the dialog window
 let provider;
