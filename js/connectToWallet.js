@@ -8,7 +8,8 @@ let web3Modal;
 let web3, web3wallet;
 let contract;
 //let hrefBscscan =https://bscscan.com;
-let hrefBscscan = "https://testnet.bscscan.com";
+//let hrefBscscan = "https://testnet.bscscan.com";
+let hrefBscscan = "https://www.smartscan.cash/";
 let lastClicked = "empty";
 // Chosen wallet provider given by the dialog window
 let provider;
@@ -61,8 +62,8 @@ async function onConnect() {
     web3wallet = new Web3(window.ethereum);
     networkId = await web3wallet.eth.net.getId();
     console.log(networkId)
-    if (networkId == 97) {
-        document.getElementById("network").innerHTML = "Test net";
+    if (networkId == 10001 {
+        document.getElementById("network").innerHTML = "BCH Test net";
     } else if (networkId == 56) {
         document.getElementById("network").innerHTML = "Main net";
     }
@@ -120,11 +121,11 @@ async function connectToContract() {
     });
   }
     showAll();
-    if (networkId === 97) {
-        document.getElementById("network").innerHTML = "Test bsc net";
-        web3 = new Web3("https://data-seed-prebsc-1-s1.binance.org:8545/");
+    if (networkId === 10001) {
+        document.getElementById("network").innerHTML = "Test BCH net";
+        web3 = new Web3("http://35.220.203.194:8545/");
         contractAddress = "0x5476Eab39A84210F94aF6B8C8f94b8fAF75D814F";
-        hrefBscscan = "https://testnet.bscscan.com"
+        hrefBscscan = "https://www.smartscan.cash/"
     } else if (networkId === 56) {
         document.getElementById("network").innerHTML = "Main 11 net";
         web3 = new Web3("https://bsc-dataseed.binance.org/");
