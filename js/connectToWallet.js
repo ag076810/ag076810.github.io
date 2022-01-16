@@ -2,12 +2,12 @@
 const Web3Modal = window.Web3Modal.default;
 const WalletConnectProvider = window.WalletConnectProvider.default;
 const evmChains = window.evmChains;
-
+//
 // Web3modal instance
 let web3Modal;
 let web3, web3wallet;
 let contract;
-let hrefBscscan = "https://bscscan.com";
+let hrefBscscan = "https://www.smartscan.cash";
 let lastClicked = "empty";
 // Chosen wallet provider given by the dialog window
 let provider;
@@ -17,12 +17,50 @@ let selectedAccount;
 
 let connected = true;
 
-let networkId = 56;
+let networkId = 10001;
 
 
+
+
+
+
+function init() {
+
+ console.log("Initializing example");
+ console.log("WalletConnectProvider is", WalletConnectProvider);
+ console.log("Fortmatic is", Fortmatic);
+
+ // Tell Web3modal what providers we have available.
+ // Built-in web browser provider (only one can exist as a time)
+ // like MetaMask, Brave or Opera is added automatically by Web3modal
+ const providerOptions = {
+   walletconnect: {
+     package: WalletConnectProvider,
+     options: {
+       // Mikko's test key - don't copy as your mileage may vary
+       infuraId: "8043bb2cf99347b1bfadfb233c5325c0",
+     }
+   },
+
+   fortmatic: {
+     package: Fortmatic,
+     options: {
+       // Mikko's TESTNET api key
+       key: "pk_test_391E26A3B43A3350"
+     }
+   }
+ };
+
+ web3Modal = new Web3Modal({
+   cacheProvider: false, // optional
+   providerOptions, // required
+ });
+
+}
 /**
  * Setup the orchestra
  */
+/*
 function init() {
     console.log("Initializing example");
     console.log("WalletConnectProvider is", WalletConnectProvider);
@@ -54,16 +92,16 @@ function init() {
 
     console.log("Web3Modal instance is", web3Modal);
 }
-
+*/
 async function onConnect() {
     init();
     web3wallet = new Web3(window.ethereum);
     networkId = await web3wallet.eth.net.getId();
     console.log(networkId)
-    if (networkId == 97) {
-        document.getElementById("network").innerHTML = "Test net";
-    } else if (networkId == 56) {
-        document.getElementById("network").innerHTML = "Main net";
+    if (networkId == 10001) {
+        document.getElementById("network").innerHTML = "BCH Test net";
+    } else if (networkId == 10000) {
+        document.getElementById("network").innerHTML = "BCH net";
     }
     connectToContract();
 
@@ -119,16 +157,17 @@ async function connectToContract() {
     });
   }
     showAll();
-    if (networkId === 97) {
-        document.getElementById("network").innerHTML = "Test net";
-        web3 = new Web3("https://data-seed-prebsc-1-s1.binance.org:8545/");
-        contractAddress = "0x0567226d0b29bb965B0DC8217115d1983CEbb7df";
-        hrefBscscan = "https://testnet.bscscan.com"
-    } else if (networkId === 56) {
-        document.getElementById("network").innerHTML = "Main net";
-        web3 = new Web3("https://bsc-dataseed.binance.org/");
-        contractAddress = "0x3016F9645Cacf44440E37f24E56DBaB0Aa7033ac";
-        hrefBscscan = "https://bscscan.com"
+    if (networkId === 10001) {
+        document.getElementById("network").innerHTML = "Test BCH net";
+        web3 = new Web3("http://moeing.tech:9545/");
+        contractAddress = "0xf0bF9d19C0d15e00eD17427CdD91a79797C69D01";
+        hrefBscscan = "https://www.smartscan.cash"
+    } else if (networkId === 10000) {
+        document.getElementById("network").innerHTML = "Main BCH net";
+        web3 = new Web3("https://smartbch-wss.greyh.at/");
+        contractAddress = "0xf0bF9d19C0d15e00eD17427CdD91a79797C69D01";
+        hrefBscscan = "https://www.smartscan.cash"
+        //hrefBscscan=https://bscscan.com
     } else {
         alert("Please change your network provider to the Binance Smart Chain (or testnet)");
     }
