@@ -20,45 +20,10 @@ let connected = true;
 let networkId = 10001;
 
 
-
-
-
-
-function init() {
-    
-    console.log("Initializing example");
-    console.log("WalletConnectProvider is", WalletConnectProvider);
-    //    console.log("Fortmatic is", Fortmatic);
-    console.log("Fortmatic is", Fortmatic);
-    
-
-    const providerOptions = {
-        walletconnect: {
-            package: WalletConnectProvider,
-            options: {
-                rpc: {
-                    56: "wss://floral-rough-snow.bsc.quiknode.pro/",
-                    // ...
-                },
-                chainId: 56,
-                rpcUrl: "wss://floral-rough-snow.bsc.quiknode.pro/",
-            },
-        },
-    };
-    
-    web3Modal = new Web3Modal({
-        cacheProvider: false, // optional
-        providerOptions, // required
-        disableInjectedProvider: false, // optional. For MetaMask / Brave / Opera.
-    });
-    
-    console.log("Web3Modal instance is", web3Modal);
-
-}
 /**
  * Setup the orchestra
  */
-/*
+
 function init() {
     console.log("Initializing example");
     console.log("WalletConnectProvider is", WalletConnectProvider);
@@ -90,7 +55,8 @@ function init() {
 
     console.log("Web3Modal instance is", web3Modal);
 }
-*/
+
+
 async function onConnect() {
     init();
     web3wallet = new Web3(window.ethereum);
