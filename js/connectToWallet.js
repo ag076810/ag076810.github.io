@@ -25,36 +25,34 @@ let networkId = 10001;
 
 
 function init() {
+    
+    console.log("Initializing example");
+    console.log("WalletConnectProvider is", WalletConnectProvider);
+    //    console.log("Fortmatic is", Fortmatic);
+    console.log("Fortmatic is", Fortmatic);
+    
 
- console.log("Initializing example");
- console.log("WalletConnectProvider is", WalletConnectProvider);
- console.log("Fortmatic is", Fortmatic);
-
- // Tell Web3modal what providers we have available.
- // Built-in web browser provider (only one can exist as a time)
- // like MetaMask, Brave or Opera is added automatically by Web3modal
- const providerOptions = {
-   walletconnect: {
-     package: WalletConnectProvider,
-     options: {
-       // Mikko's test key - don't copy as your mileage may vary
-       infuraId: "8043bb2cf99347b1bfadfb233c5325c0",
-     }
-   },
-
-   fortmatic: {
-     package: Fortmatic,
-     options: {
-       // Mikko's TESTNET api key
-       key: "pk_test_391E26A3B43A3350"
-     }
-   }
- };
-
- web3Modal = new Web3Modal({
-   cacheProvider: false, // optional
-   providerOptions, // required
- });
+    const providerOptions = {
+        walletconnect: {
+            package: WalletConnectProvider,
+            options: {
+                rpc: {
+                    56: "wss://floral-rough-snow.bsc.quiknode.pro/",
+                    // ...
+                },
+                chainId: 56,
+                rpcUrl: "wss://floral-rough-snow.bsc.quiknode.pro/",
+            },
+        },
+    };
+    
+    web3Modal = new Web3Modal({
+        cacheProvider: false, // optional
+        providerOptions, // required
+        disableInjectedProvider: false, // optional. For MetaMask / Brave / Opera.
+    });
+    
+    console.log("Web3Modal instance is", web3Modal);
 
 }
 /**
@@ -159,12 +157,12 @@ async function connectToContract() {
     showAll();
     if (networkId === 10001) {
         document.getElementById("network").innerHTML = "Test BCH net";
-        web3 = new Web3("http://moeing.tech:9545/");
+        web3 = new Web3("https://moeing.tech:9545/");
         contractAddress = "0xf0bF9d19C0d15e00eD17427CdD91a79797C69D01";
         hrefBscscan = "https://www.smartscan.cash"
     } else if (networkId === 10000) {
         document.getElementById("network").innerHTML = "Main BCH net";
-        web3 = new Web3("https://smartbch-wss.greyh.at/");
+        web3 = new Web3("wss://smartbch-wss.greyh.at/");
         contractAddress = "0xf0bF9d19C0d15e00eD17427CdD91a79797C69D01";
         hrefBscscan = "https://www.smartscan.cash"
         //hrefBscscan=https://bscscan.com
