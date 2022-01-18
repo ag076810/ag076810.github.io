@@ -129,7 +129,8 @@ async function connectToContract() {
     } else if (networkId === 10000) {
         document.getElementById("network").innerHTML = "Main BCH net";
         web3 = new Web3("wss://smartbch-wss.greyh.at/");
-        contractAddress = "0xf0bF9d19C0d15e00eD17427CdD91a79797C69D01";
+        //contractAddress = "0xf0bF9d19C0d15e00eD17427CdD91a79797C69D01";
+        contractAddress = "0x385914f7589899Ad2bfF176d4192fB643AE19912";
         hrefBscscan = "https://www.smartscan.cash"
         //hrefBscscan=https://bscscan.com
     } else {
@@ -196,17 +197,19 @@ function blink() {
 
 async function getFirstCountry() {
     let prices = await contract.methods.getTopCountriesPrices().call();
-    if (prices[4][1] != "N/A") {
-        highlightCountry(prices[4][1], countryListAlpha3[prices[4][1]]);
+    cc= prices[10][1]
+    if (prices[10][1] != "N/A") {
+        highlightCountry(prices[10][1], countryListAlpha3[prices[10][1]]);
     }
     refreshCountry();
 }
 
 async function getLeaderboard() {
     let prices = await contract.methods.getTopCountriesPrices().call();
-    console.log(prices[4][0]);
-    //document.getElementById("firstPlace").innerHTML = web3.utils.fromWei(prices[4][0], "ether") + " - " + prices[4][1] + " - " + (countryListAlpha3[prices[4][1]] == null ? "" : countryListAlpha3[prices[4][1]]);
-    document.getElementById("firstPlace").innerHTML = web3.utils.fromWei(prices[4][0], "ether") + " | " + (countryListAlpha3[prices[4][1]] == null ? "" : countryListAlpha3[prices[4][1]])+ " | "+ await contract.methods.getMessage(prices[4][1] ).call();
+    console.log(prices[10][0]);
+    
+    /*
+    document.getElementById("firstPlace").innerHTML = web3.utils.fromWei(prices[4][0], "ether") + " | "  + prices[4][1] + (countryListAlpha3[prices[4][1]] == null ? "" : countryListAlpha3[prices[4][1]])+ " | "+ await contract.methods.getMessage(prices[4][1] ).call();
     document.getElementById("firstPlace").onclick = function() {
         if (prices[4][1] != "N/A") {
             $("html, body").animate({
@@ -215,7 +218,7 @@ async function getLeaderboard() {
             highlightCountry(prices[4][1], countryListAlpha3[prices[4][1]]);
         }
     };
-    document.getElementById("secondPlace").innerHTML = web3.utils.fromWei(prices[3][0], "ether") + " | " + (countryListAlpha3[prices[3][1]] == null ? "" : countryListAlpha3[prices[3][1]])+ " | "+ await contract.methods.getMessage(prices[3][1] ).call();;
+    document.getElementById("secondPlace").innerHTML = web3.utils.fromWei(prices[3][0], "ether") + " | "  + prices[3][1] + (countryListAlpha3[prices[3][1]] == null ? "" : countryListAlpha3[prices[3][1]])+ " | "+ await contract.methods.getMessage(prices[3][1] ).call();;
     document.getElementById("secondPlace").onclick = function() {
         if (prices[3][1] != "N/A") {
             $("html, body").animate({
@@ -246,6 +249,112 @@ async function getLeaderboard() {
         }
     };
     hideAll();
+    
+    */
+    
+    
+    
+    document.getElementById("firstPlace").innerHTML = web3.utils.fromWei(prices[10][0], "ether") + " | "  + prices[10][1] + (countryListAlpha3[prices[10][1]] == null ? "" : countryListAlpha3[prices[10][1]])+ " | "+ await contract.methods.getMessage(prices[10][1] ).call();
+    document.getElementById("firstPlace").onclick = function() {
+        if (prices[10][1] != "N/A") {
+            $("html, body").animate({
+                scrollTop: $(document).height()
+            }, "slow");
+            highlightCountry(prices[10][1], countryListAlpha3[prices[10][1]]);
+        }
+    };
+    
+    document.getElementById("secondPlace").innerHTML = web3.utils.fromWei(prices[9][0], "ether") + " | "  + prices[9][1] + (countryListAlpha3[prices[9][1]] == null ? "" : countryListAlpha3[prices[9][1]])+ " | "+ await contract.methods.getMessage(prices[9][1] ).call();
+    document.getElementById("secondPlace").onclick = function() {
+        if (prices[9][1] != "N/A") {
+            $("html, body").animate({
+                scrollTop: $(document).height()
+            }, "slow");
+            highlightCountry(prices[9][1], countryListAlpha3[prices[9][1]]);
+        }
+    };
+    document.getElementById("thirdPlace").innerHTML = web3.utils.fromWei(prices[8][0], "ether") + " | "  + prices[8][1] + (countryListAlpha3[prices[8][1]] == null ? "" : countryListAlpha3[prices[8][1]])+ " | "+ await contract.methods.getMessage(prices[8][1] ).call();;
+    document.getElementById("thirdPlace").onclick = function() {
+        if (prices[8][1] != "N/A") {
+            $("html, body").animate({
+                scrollTop: $(document).height()
+            }, "slow");
+
+            highlightCountry(prices[8][1], countryListAlpha3[prices[8][1]]);
+        }
+    };
+    document.getElementById("fourthPlace").innerHTML = web3.utils.fromWei(prices[7][0], "ether") + " | " + prices[7][1] + (countryListAlpha3[prices[7][1]] == null ? "" :" - " + countryListAlpha3[prices[7][1]])+ " | "+ await contract.methods.getMessage(prices[7][1] ).call();;
+    document.getElementById("fourthPlace").onclick = function() {
+        if (prices[7][1] != "N/A") {
+            $("html, body").animate({
+                scrollTop: $(document).height()
+            }, "slow");
+
+            highlightCountry(prices[7][1], countryListAlpha3[prices[7][1]]);
+        }
+    };
+    document.getElementById("fivePlace").innerHTML = web3.utils.fromWei(prices[6][0], "ether") + " | " + prices[6][1]+ (countryListAlpha3[prices[6][1]] == null ? "" :" - " + countryListAlpha3[prices[6][1]])+ " | "+ await contract.methods.getMessage(prices[6][1] ).call();
+    document.getElementById("fivePlace").onclick = function() {
+        if (prices[6][1] != "N/A") {
+            $("html, body").animate({
+                scrollTop: $(document).height()
+            }, "slow");
+
+            highlightCountry(prices[6][1], countryListAlpha3[prices[6][1]]);
+        }
+    };
+    
+    document.getElementById("sixPlace").innerHTML = web3.utils.fromWei(prices[5][0], "ether") + " | "  + prices[5][1] + (countryListAlpha3[prices[5][1]] == null ? "" : countryListAlpha3[prices[5][1]])+ " | "+ await contract.methods.getMessage(prices[5][1] ).call();
+    document.getElementById("sixPlace").onclick = function() {
+        if (prices[5][1] != "N/A") {
+            $("html, body").animate({
+                scrollTop: $(document).height()
+            }, "slow");
+            highlightCountry(prices[5][1], countryListAlpha3[prices[5][1]]);
+        }
+    };
+    
+    document.getElementById("sevenPlace").innerHTML = web3.utils.fromWei(prices[4][0], "ether") + " | "  + prices[4][1] + (countryListAlpha3[prices[4][1]] == null ? "" : countryListAlpha3[prices[4][1]])+ " | "+ await contract.methods.getMessage(prices[4][1] ).call();
+    document.getElementById("sevenPlace").onclick = function() {
+        if (prices[4][1] != "N/A") {
+            $("html, body").animate({
+                scrollTop: $(document).height()
+            }, "slow");
+            highlightCountry(prices[4][1], countryListAlpha3[prices[4][1]]);
+        }
+    };
+    document.getElementById("eightPlace").innerHTML = web3.utils.fromWei(prices[3][0], "ether") + " | "  + prices[3][1] + (countryListAlpha3[prices[3][1]] == null ? "" : countryListAlpha3[prices[3][1]])+ " | "+ await contract.methods.getMessage(prices[3][1] ).call();;
+    document.getElementById("eightPlace").onclick = function() {
+        if (prices[3][1] != "N/A") {
+            $("html, body").animate({
+                scrollTop: $(document).height()
+            }, "slow");
+
+            highlightCountry(prices[3][1], countryListAlpha3[prices[3][1]]);
+        }
+    };
+    document.getElementById("ninePlace").innerHTML = web3.utils.fromWei(prices[2][0], "ether") + " | " + prices[2][1] + (countryListAlpha3[prices[2][1]] == null ? "" :" - " + countryListAlpha3[prices[2][1]])+ " | "+ await contract.methods.getMessage(prices[2][1] ).call();;
+    document.getElementById("ninePlace").onclick = function() {
+        if (prices[2][1] != "N/A") {
+            $("html, body").animate({
+                scrollTop: $(document).height()
+            }, "slow");
+
+            highlightCountry(prices[2][1], countryListAlpha3[prices[2][1]]);
+        }
+    };
+    document.getElementById("tenPlace").innerHTML = web3.utils.fromWei(prices[1][0], "ether") + " | " + prices[1][1]+ (countryListAlpha3[prices[1][1]] == null ? "" :" - " + countryListAlpha3[prices[6][1]])+ " | "+ await contract.methods.getMessage(prices[1][1] ).call();
+    document.getElementById("tenPlace").onclick = function() {
+        if (prices[1][1] != "N/A") {
+            $("html, body").animate({
+                scrollTop: $(document).height()
+            }, "slow");
+
+            highlightCountry(prices[1][1], countryListAlpha3[prices[1][1]]);
+        }
+    };
+    hideAll();
+    
 }
 
 function moveToCountry(country) {
