@@ -247,8 +247,8 @@ async function getLeaderboard() {
         }
     };
     
-    document.getElementById("fivePlace").innerHTML = web3.utils.fromWei(prices[6][0], "ether") + " | "  + (countryListAlpha3[prices[6][1]] == null ? "N/A" : countryListAlpha3[prices[6][1]])+ " | "+ await contract.methods.getMessage(prices[6][1] ).call();
-    document.getElementById("fivePlace").onclick = function() {
+    document.getElementById("fifthPlace").innerHTML = web3.utils.fromWei(prices[6][0], "ether") + " | "  + (countryListAlpha3[prices[6][1]] == null ? "N/A" : countryListAlpha3[prices[6][1]])+ " | "+ await contract.methods.getMessage(prices[6][1] ).call();
+    document.getElementById("fifthPlace").onclick = function() {
         if (prices[6][1] != "N/A") {
             $("html, body").animate({
                 scrollTop: $(document).height()
