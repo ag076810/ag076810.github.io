@@ -324,32 +324,54 @@ textarea {
       }
 
 #firstPlace {
-  font-size: 4.5vh;
+  font-size: 5vh;
   color: var(--goldText);
 }
 
 
 #secondPlace {
-  font-size: 4vh;
+  font-size: 4.5vh;
   color: var(--silverText);
 }
 
 #thirdPlace {
-  font-size: 3.5vh;
+  font-size: 4vh;
   color: var(--bronzeText);
 }
 
 #fourthPlace {
-  font-size: 3vh;
-  color: var(--text);
+  font-size: 3.5vh;
+  color: #3e9efc;
 }
 
 #fifthPlace {
+  font-size: 3vh;
+  color: #336666;
+}
+
+#sixPlace {
   font-size: 2.5vh;
   color: var(--text);
 }
 
-#firstPlace:hover,#secondPlace:hover, #thirdPlace:hover, #fourthPlace:hover, #fifthPlace:hover  {
+#sevenPlace {
+  font-size: 2.5vh;
+  color: var(--text);
+}
+#eightPlace {
+  font-size: 2.5vh;
+  color: var(--text);
+}
+#ninePlace {
+  font-size: 2.5vh;
+  color: var(--text);
+}
+#tenPlace {
+  font-size: 2.5vh;
+  color: var(--text);
+}
+
+#firstPlace:hover,#secondPlace:hover, #thirdPlace:hover, #fourthPlace:hover, #fifthPlace:hover,#sixPlace:hover,#sevenPlace:hover,#eightPlace:hover,#ninePlace:hover,#tenPlace:hover  {
   text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
 
