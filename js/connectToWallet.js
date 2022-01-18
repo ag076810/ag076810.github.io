@@ -228,7 +228,7 @@ async function getLeaderboard() {
     };
     document.getElementById("thirdPlace").innerHTML = web3.utils.fromWei(prices[8][0], "ether") + " | " + (countryListAlpha3[prices[8][1]] == null ? "N/A" :countryListAlpha3[prices[8][1]])+ " | "+ await contract.methods.getMessage(prices[8][1] ).call();;
     document.getElementById("thirdPlace").onclick = function() {
-        if (prices[2][1] != "N/A") {
+        if (prices[8][1] != "N/A") {
             $("html, body").animate({
                 scrollTop: $(document).height()
             }, "slow");
