@@ -105,9 +105,9 @@ let contractAbi = [{
                     "type": "string"
                 }
             ],
-            "internalType": "struct BuyEarth.leaderboardCountry[5]",
+            "internalType": "struct BuyEarth.leaderboardCountry[11]",
             "name": "",
-            "type": "tuple[5]"
+            "type": "tuple[11]"
         }],
         "stateMutability": "view",
         "type": "function"
