@@ -124,7 +124,7 @@ async function connectToContract() {
     if (networkId === 10001) {
         document.getElementById("network").innerHTML = "Test BCH net";
         web3 = new Web3("https://moeing.tech:9545/");
-        contractAddress = "0xf0bF9d19C0d15e00eD17427CdD91a79797C69D01";
+        contractAddress = "0x385914f7589899Ad2bfF176d4192fB643AE19912";
         hrefBscscan = "https://www.smartscan.cash"
     } else if (networkId === 10000) {
         document.getElementById("network").innerHTML = "Main BCH net";
