@@ -124,13 +124,13 @@ async function connectToContract() {
     if (networkId === 10001) {
         document.getElementById("network").innerHTML = "Test BCH net";
         web3 = new Web3("https://moeing.tech:9545/");
-        contractAddress = "0x385914f7589899Ad2bfF176d4192fB643AE19912";
+        contractAddress = "0x78BbB2f63C5FB8F67C88CE63a2cb5c0F71043528";
         hrefBscscan = "https://www.smartscan.cash"
     } else if (networkId === 10000) {
         document.getElementById("network").innerHTML = "Main BCH net";
         web3 = new Web3("wss://smartbch-wss.greyh.at/");
         //contractAddress = "0xf0bF9d19C0d15e00eD17427CdD91a79797C69D01";
-        contractAddress = "0x385914f7589899Ad2bfF176d4192fB643AE19912";
+        contractAddress = "0x78BbB2f63C5FB8F67C88CE63a2cb5c0F71043528";
         hrefBscscan = "https://www.smartscan.cash"
         //hrefBscscan=https://bscscan.com
     } else {
@@ -197,19 +197,18 @@ function blink() {
 
 async function getFirstCountry() {
     let prices = await contract.methods.getTopCountriesPrices().call();
-    cc= prices[10][1]
-    if (prices[10][1] != "N/A") {
-        highlightCountry(prices[10][1], countryListAlpha3[prices[10][1]]);
+    if (prices[4][1] != "N/A") {
+        highlightCountry(prices[4][1], countryListAlpha3[prices[4][1]]);
     }
     refreshCountry();
 }
 
 async function getLeaderboard() {
     let prices = await contract.methods.getTopCountriesPrices().call();
-    console.log(prices[10][0]);
+    console.log(prices[4][0]);
     
-    /*
-    document.getElementById("firstPlace").innerHTML = web3.utils.fromWei(prices[4][0], "ether") + " | "  + prices[4][1] + (countryListAlpha3[prices[4][1]] == null ? "" : countryListAlpha3[prices[4][1]])+ " | "+ await contract.methods.getMessage(prices[4][1] ).call();
+    
+    document.getElementById("firstPlace").innerHTML = web3.utils.fromWei(prices[0][0], "ether") + " | "  + prices[4][1] + (countryListAlpha3[prices[4][1]] == null ? "" : countryListAlpha3[prices[0][1]])+ " | "+ await contract.methods.getMessage(prices[4][1] ).call();
     document.getElementById("firstPlace").onclick = function() {
         if (prices[4][1] != "N/A") {
             $("html, body").animate({
@@ -250,10 +249,10 @@ async function getLeaderboard() {
     };
     hideAll();
     
-    */
     
     
     
+    /*
     document.getElementById("firstPlace").innerHTML = web3.utils.fromWei(prices[10][0], "ether") + " | "  + prices[10][1] + (countryListAlpha3[prices[10][1]] == null ? "" : countryListAlpha3[prices[10][1]])+ " | "+ await contract.methods.getMessage(prices[10][1] ).call();
     document.getElementById("firstPlace").onclick = function() {
         if (prices[10][1] != "N/A") {
@@ -354,7 +353,7 @@ async function getLeaderboard() {
         }
     };
     hideAll();
-    
+    */
 }
 
 function moveToCountry(country) {
