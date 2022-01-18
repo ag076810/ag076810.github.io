@@ -124,13 +124,13 @@ async function connectToContract() {
     if (networkId === 10001) {
         document.getElementById("network").innerHTML = "Test BCH net";
         web3 = new Web3("https://moeing.tech:9545/");
-        contractAddress = "0xE640C290D2078255aF971e93Af6d095eFFe00Ebe";
+        contractAddress = "0x113825435e90f3B562809d618F8Eb3Ac4fb6C2f9";
         hrefBscscan = "https://www.smartscan.cash"
     } else if (networkId === 10000) {
         document.getElementById("network").innerHTML = "Main BCH net";
         web3 = new Web3("wss://smartbch-wss.greyh.at/");
         //contractAddress = "0xf0bF9d19C0d15e00eD17427CdD91a79797C69D01";
-        contractAddress = "0xE640C290D2078255aF971e93Af6d095eFFe00Ebe";
+        contractAddress = "0x113825435e90f3B562809d618F8Eb3Ac4fb6C2f9";
         hrefBscscan = "https://www.smartscan.cash"
         //hrefBscscan=https://bscscan.com
     } else {
