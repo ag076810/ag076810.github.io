@@ -141,6 +141,21 @@ small {
   }
 }
 
+
+
+
+table.box{
+  width: 70%;
+  height: 0;
+  border: 1px solid #f00;
+  margin: auto;
+}
+table.box td{
+  vertical-align: middle;
+  text-align: center;
+}
+
+
 /*Styles for the world globe*/
 #worldGlobe {
   width: 100vw;
@@ -155,8 +170,8 @@ small {
 }
 @media screen and (min-width: 700px) {
   #worldGlobe {
-    width: 50vw;
-    height:50vw;
+    width: 40vw;
+    height:40vw;
   }
   .zoom {
     display:inline;
