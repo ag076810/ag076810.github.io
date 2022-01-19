@@ -74,7 +74,6 @@
         </table>
         -->
     
-    <input type="button" class="glow" id="connectBtn" onclick="onConnect()" value="Connect wallet"></button> <br> <br>
     
     <div id="Choosecountry">
         <span>Choose a country:</span><br>
@@ -281,12 +280,12 @@
       <small><b> Disclaimer: </b> for the best experience, use a desktop!</small>
   </div>
   <input type="button" id="enterSite" onclick="enterSite()" value="Enter site"></input>
+  
 </div>
     <div id="test"> </div>
     <div id="globe"> </div>
     <input type="button" class="zoom" onclick="zoomInOnDiv()" value="Zoom in"></input>
     <input type="button" class="zoom"  onclick="zoomInOutDiv()" value="Reset"></input>
-
 
       <div id="countryInfo">
         Current selected country: <br>
@@ -298,9 +297,12 @@
         <textarea id="newCountryMessage" placeholder="New message to be displayed (max 140 characters)" maxlength="140"></textarea> <br>
         <input type="button" id="buyCountry" class="notAvailable" onclick="buyCountry()" value="Connect wallet to buy ^"></input> <br>
         <div class="loader center hide"><span></span></div>
+        <input type="button" class="glow" id="connectBtn" onclick="onConnect()" value="Connect wallet"></button> <br> <br>
         Current network: <span id="network">Main net</span>
          <br>
       </div>
+    
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="./js/UI.js"></script>
