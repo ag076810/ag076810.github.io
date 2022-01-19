@@ -80,6 +80,7 @@ async function onConnect() {
             selectedAccount = await web3wallet.eth.getAccounts()[0];
             contract = new web3wallet.eth.Contract(contractAbi, contractAddress);
         } catch (e) {
+            document.getElementById("buyCountry").value = "document.getElementById("buyCountry").value = "Add message and buy country";";
             console.log("Could not get a wallet connection", e);
             return;
         }
