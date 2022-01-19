@@ -136,7 +136,7 @@ async function connectToContract() {
         hrefBscscan = "https://www.smartscan.cash"
         //hrefBscscan=https://bscscan.com
     } else {
-        alert("Please change your network provider to the Binance Smart Chain (or testnet)");
+        alert("Please change your network provider to the SmartBCH ");
     }
 
     try {
