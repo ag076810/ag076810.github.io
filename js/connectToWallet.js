@@ -148,7 +148,7 @@ async function connectToContract() {
 
 async function getData(id, name) {
     document.getElementById("countryName").innerHTML = name;
-    document.getElementById("countryId").innerHTML = id;
+    //document.getElementById("countryId").innerHTML = id;
     let price = await contract.methods.getValueOfCountry(id).call();
     if (price == 0) {
         price = 0.01;
