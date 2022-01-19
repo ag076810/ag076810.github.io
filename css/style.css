@@ -150,6 +150,7 @@ table.box{
   height: 0;
   border: 1px solid #f00;
   margin: auto;
+  animation: glowing 11300ms infinite;
 }
 table.box td{
   vertical-align: middle;
@@ -175,8 +176,8 @@ table.box td{
 }
 @media screen and (min-width: 700px) {
   #worldGlobe {
-    width: 40vw;
-    height:40vw;
+    width: 30vw;
+    height:30vw;
   }
   .zoom {
     display:inline;
