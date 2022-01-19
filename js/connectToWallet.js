@@ -153,7 +153,8 @@ async function getData(id, name) {
     } else {
         price = web3.utils.fromWei(price, "ether");
     }
-    document.getElementById("countryPrice").innerHTML = price;
+    
+    document.getElementById("countryPrice").innerHTML = parseInt(price*1000)*0.001;
     let owner = await contract.methods.getCountryOwner(id).call();
     document.getElementById("countryOwner").innerHTML = owner;
     document.getElementById("countryOwner").href = hrefBscscan + "/address/" + owner;
