@@ -1,16 +1,17 @@
 :root {
-  --background: #ffe9d1;
-  --text: #001440;
-  --goldText: #D4AF37;
-  --silverText: #C4CACE;
-  --bronzeText: #B08D57;
-  --textHighlightColor: #fb4d46;
-  --country: #7da27e ;
-  --countryHover: #608661;
-  --countrySelect: #825d81;
-  --worldLight: #368DC5;
+  --background: #0F1546;
+  --text: #97E3FE;
+  --goldText: #ffdd30;
+  --silverText: #fcfcf2;
+  --bronzeText: #d19f4f;
+  --textHighlightColor: #CC54D0;
+  --country: #85A894 ;
+  --countryHover: #AA5A9C;
+  --countrySelect: #AA5A9C;
+  --worldLight: #3E6B7E;
   --worldDark: #0058AB;
   --loadingIcon: #fb4d46;
+  --textcountryInfoColor: #F7D967;
 }
 
 /* latin-ext */
@@ -92,7 +93,7 @@ small {
 }
 
 #preInfo a {
-  margin-top: 5px;
+  margin-top: 10px;
   font-size: 5vh;
 }
 
@@ -116,7 +117,7 @@ small {
 }
 
 #countryInfo span, #country a {
-  color: var(--textHighlightColor);
+  color: var(--textcountryInfoColor);
 }
 #countryInfo a:hover {
   color: var(--countrySelect);
@@ -125,7 +126,7 @@ small {
 
 #leaderboard {
   top: 0;
-  font-size: 3vh;
+  font-size: 5vh;
 }
 
 @media screen and (max-width: 800px) {
@@ -154,6 +155,10 @@ table.box td{
   vertical-align: middle;
   text-align: center;
 }
+
+/*input[type=button].glow {
+/*  animation: glowing 1300ms infinite;
+/*}
 
 
 /*Styles for the world globe*/
@@ -277,16 +282,16 @@ p{
 }
 
 input[type=button], select, textarea {
-  padding: 12px 20px;
-  border-radius: 25px;
+  padding: 20px 20px;
+  border-radius: 50px;
   border: 3px solid black;
   color: white;
   box-sizing: border-box;
-  background-color: var(--country);
+  background-color: #AA5A9C;
 
 }
 input[type=button]:hover {
-  background-color: var(--countrySelect);
+  background-color: #642feb;
   cursor: pointer;
   border-color: var(--text);
 }
@@ -325,8 +330,8 @@ textarea {
 
 @keyframes glowing {
         0% {
-          background-color: var(--textHighlightColor);
-          box-shadow: 0 0 5px var(--textHighlightColor);
+          background-color: #b35bd9;
+          box-shadow: 0 0 5px #a223d9;
         }
         50% {
           background-color: var(--countrySelect);
@@ -338,9 +343,21 @@ textarea {
         }
       }
 
+
 #firstPlace {
   font-size: 3vh;
   color: var(--goldText);
+  color:#fff;
+  letter-spacing:2px;
+}
+
+#firstPlace:nth-of-type(1){
+  text-shadow:
+    0 0 5px rgba(67,232,216, 1),
+    0 0 10px rgba(67,232,216, 1),
+    0 0 20px rgba(67,232,216, 1),
+    0 0 40px rgba(67,232,216, 1);
+  animation:neon-shine 3s linear infinite;
 }
 
 
@@ -349,14 +366,16 @@ textarea {
   color: var(--silverText);
 }
 
+
 #thirdPlace {
   font-size: 3vh;
   color: var(--bronzeText);
 }
 
+
 #fourthPlace {
   font-size: 3vh;
-  color: #6f66fc;
+  color: #1E588D;
 }
 
 #fifthPlace {
@@ -390,6 +409,13 @@ textarea {
   text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
 
+
+@keyframes neon-shine{
+  0%{opacity:1;}
+  50%{opacity:0;}
+  100%{
+  color:#232323;}
+}
 
 /* Layout */
 .center {
