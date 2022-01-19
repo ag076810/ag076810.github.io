@@ -311,7 +311,7 @@ option:hover {
 }
 
 input[type=button].glow {
-  animation: glowing 1300ms infinite;
+    animation: glowing 300ms infinite;
 }
 
 textarea {
