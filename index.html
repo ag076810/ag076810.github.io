@@ -34,15 +34,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
+    
     <span id="empty"> </span>
 
       
       <a href="http://counfties.ml"><h1 >Cou<b>nft</b>ies</h1></a>
-      <small><b>NOTE:</b> Standard network is Test BCH mainnet.<br> Connect your wallet to change network.</small>
+      <small><b class="lang" key="Line21"></b> <l class="lang" key="Line22"></l><br><l class="lang" key="Line23"></l></small>
+      <small class="lang" key="NOTE1"></small>
       <div id="leaderboard">
         <div class="loader center"><span></span></div>
-        <span>Leaderboard:</span><br>
-        <small><small><small>(Prices in $BCH)</small></small></small><br><br>
+        <span><l class="lang" key="Line24"></l></span><br>
+        <small><small><small><l class="lang" key="Line25"></l></small></small></small><br><br>
         <table  class="box" style="border:5px #97E3FE dashed;padding:5px;" rules="all" cellpadding='20';>
         <tr><td ><a id="firstPlace" href="#"> </a> </td></tr>
         <tr><td ><a id="secondPlace" href="#"> </a> </td></tr>
@@ -55,9 +57,6 @@
         <tr><td ><a id="ninePlace" href="#"> </a> </td></tr>
         <tr><td ><a id="tenPlace" href="#"> </a> </td></tr>
         </table><br><br>
-    
-    
-    
     
         <!--
         <table  style="border:3px #FFAC55 dashed;padding:5px;" rules="all" cellpadding='5';>
@@ -73,10 +72,14 @@
             <tr><td><a id="tenPlace" href="#"> </a> </td></tr>
         </table>
         -->
-    
+        <div class="go-top">
+            <input type="button" class="translate"  id="en-gb" value="English"></input><br>
+            <input type="button" class="translate"  id="zh-tw" value="簡體中文"></input><br><br>
+            <a href="#">🔝</a>
+        </div>
     
     <div id="Choosecountry">
-        <span>Choose a country:</span><br>
+        <span><l class="lang" key="Line20"></l></span><br>
     <!--
     </div> <br>
     <input type="button" class="glow" id="connectBtn" onclick="onConnect()" value="Connect wallet"></button> <br> <br>
@@ -262,23 +265,29 @@
 	<option value="ZMB">Zambia</option>
 	<option value="ZWE">Zimbabwe</option>
 </select>
+    
+
 <div id="preInfo">
     <!--<a href="https://t.me/counfties" class="fa fa-telegram"></a>
   <a href="https://twitter.com/counfties" class="fa fa-twitter"></a>
   <a href="https://github.com/rutgerklamer/counfties" class="fa fa-github"></a>-->
+
+    <!--<button type="button" class="translate" id="en-gb"> EN </button>-->
+    <!--<button type="button" class="translate" id="zh-tw"> 中文 </button>-->
+
+
   <div id="infoText">
     <a href="http://counfties.ml"><h1 >Cou<b>nft</b>ies</h1></a><br>
-    -  <b>What ?</b> <br>
-      This is a Decentralized Application (Dapp). You can own countries and display your message on them. The leaderboard shows the wealthiest countries. <br> <br>
-    -  <b>What's in it for me ?</b> <br>
-        Once you own a country you're now it's king. You message will be displayed on that countries page. Each time a country is bought, it's price increases by 20%.
-        If someone buys your country, you get your BCH back + an extra 10%. <br> <br>
-    -  <b>Roadmap ?</b> <br>
-    Not yet. Billboard rental function may be introduced in the future. Currently only the message board function.<br> <br>
-      -  <b>Goal ?</b> <br>
-      Create the farm and pay for comments with counfties tokens.
-      <br> <br>
-      <small><b> Disclaimer: </b> for the best experience, use a desktop!</small>
+    -  <b class="lang" key="Line1"></b> <br>
+    <l class="lang" key="Line2"></l><br><l class="lang" key="Line2-1"></l><br><br>
+    -  <b class="lang" key="Line3"></b> <br>
+    <l class="lang" key="Line4"></l><br><l class="lang" key="Line4-1"></l><br><br>
+    -  <b class="lang" key="Line5"></b> <br>
+    <l class="lang" key="Line6"></l> <br><br>
+    -  <b class="lang" key="Line7"></b> <br>
+    <l class="lang" key="Line8"></l> <br><br><br>
+      <small><b class="lang" key="Line9"></b>
+    <l class="lang" key="Line10"></l> <br><br></small>
   </div>
   <input type="button" id="enterSite" onclick="enterSite()" value="Enter site"></input>
   
@@ -289,17 +298,17 @@
     <input type="button" class="zoom"  onclick="zoomInOutDiv()" value="Reset"></input>
 
       <div id="countryInfo">
-        Current selected country: <br>
-        Name: <span id="countryName"></span><br>
-        Country price (in BCH): <span id="countryPrice"></span> $BCH<br>
-        Owner: <a id="countryOwner"> </a><br>
-        Country message: <span id="countryMessage"> </span><br><br>
-        <small><small><small><b>NOTE:</b> The address query function is not listed, please remember the city you purchased.</small></small></small><br>
+        <l class="lang" key="Line11"></l><br>
+        <l class="lang" key="Line12"></l><span id="countryName"></span><br>
+        <l class="lang" key="Line13"></l><span id="countryPrice"></span> $BCH<br>
+        <l class="lang" key="Line14"></l><a id="countryOwner"> </a><br>
+        <l class="lang" key="Line15"></l><span id="countryMessage"> </span><br><br>
+        <small><small><small><b class="lang" key="Line16"></b> <l class="lang" key="Line17"></l></small></small></small><br>
         <textarea id="newCountryMessage" placeholder="New message to be displayed (max 140 characters)" maxlength="140"></textarea> <br>
         <input type="button" id="buyCountry" class="notAvailable" onclick="buyCountry()" value="Connect wallet to buy ^"></input>
         <div class="loader center hide"><span></span></div>
         <input type="button" class="glow" id="connectBtn" onclick="onConnect()" value="Connect wallet"></button> <br> <br>
-        Current network: <span id="network">Main net</span>
+        <l class="lang" key="Line18"></l><span id="network"><l class="lang" key="Line19"></l></span>
          <br>
       </div>
     
@@ -307,6 +316,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="./js/UI.js"></script>
+    <script type="text/javascript" src="./js/Lang.js"></script>
     <script type="text/javascript" src="./dist/d3.js"></script>
     <script type="text/javascript" src="./dist/d3.geo.js"></script>
     <script src="./dist/web3.min.js"></script>
@@ -318,6 +328,8 @@
     <script type="text/javascript" src="./js/d3Init.js"></script>
     <script type="text/javascript" src="./js/abi.js"></script>
     <script type="text/javascript" src="./js/connectToWallet.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
 
   </body>
+
 </html>
