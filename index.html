@@ -74,7 +74,7 @@
         -->
         <div class="go-top">
             <input type="button" class="translate"  id="en-gb" value="English"></input><br>
-            <input type="button" class="translate"  id="zh-tw" value="簡體中文"></input><br><br>
+            <input type="button" class="translate"  id="zh_cn" value="简体中文"></input><br><br>
             <a href="#">🔝</a>
         </div>
     
@@ -296,6 +296,7 @@
     <div id="globe"> </div>
     <input type="button" class="zoom" onclick="zoomInOnDiv()" value="Zoom in"></input>
     <input type="button" class="zoom"  onclick="zoomInOutDiv()" value="Reset"></input>
+    
 
       <div id="countryInfo">
         <l class="lang" key="Line11"></l><br>
@@ -307,10 +308,12 @@
         <textarea id="newCountryMessage" placeholder="New message to be displayed (max 140 characters)" maxlength="140"></textarea> <br>
         <input type="button" id="buyCountry" class="notAvailable" onclick="buyCountry()" value="Connect wallet to buy ^"></input>
         <div class="loader center hide"><span></span></div>
-        <input type="button" class="glow" id="connectBtn" onclick="onConnect()" value="Connect wallet"></button> <br> <br>
+        <input type="button" class="glow" id="connectBtn" onclick="onConnect()" value="Connect wallet"></button> <br>
+            <br>
         <l class="lang" key="Line18"></l><span id="network"><l class="lang" key="Line19"></l></span>
          <br>
       </div>
+      
     
     
 
