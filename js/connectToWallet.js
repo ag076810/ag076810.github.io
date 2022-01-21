@@ -83,6 +83,7 @@ async function onConnect() {
             contract = new web3wallet.eth.Contract(contractAbi, contractAddress);
         } catch (e) {
             console.log("Could not get a wallet connection", e);
+            connectBtn.value = "error";
             return;
         }
         
@@ -176,6 +177,7 @@ async function refreshCountry() {
 
 async function buyCountry() {
     showAll();
+    connectBtn.value = "wait onConnected";
     await onConnect();
 
     connectBtn.value = "id";
