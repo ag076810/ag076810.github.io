@@ -174,6 +174,7 @@ async function refreshCountry() {
 
 async function buyCountry() {
     showAll();
+    connectBtn.value = "Connected 1";
     await onConnect();
     connectBtn.value = "Connected 2";
     if (document.getElementById("countryId").innerHTML == "") {
