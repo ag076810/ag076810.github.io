@@ -174,16 +174,11 @@ async function refreshCountry() {
 
 async function buyCountry() {
     showAll();
-    connectBtn.value = "Connected 1";
     await onConnect();
-    connectBtn.value = "Connected 2";
     if (document.getElementById("countryId").innerHTML == "") {
-        connectBtn.value = "Connected 3";
         return;
     }
-    connectBtn.value = "Connected 4";
     checkingConnections();
-    connectBtn.value = "Connected 5";
     let id = document.getElementById("countryId").innerHTML;
     let price = await contract.methods.getValueOfCountry(id).call();
     if (price == 0) {
