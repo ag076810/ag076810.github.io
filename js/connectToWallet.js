@@ -73,17 +73,14 @@ async function onConnect() {
 
     if (connected) {
         try {
-
             provider = await web3Modal.connect();
             console.log(provider);
             connectBtn.value = "Connected";
-
             $("#connectBtn").removeClass("glow");
             selectedAccount = await web3wallet.eth.getAccounts()[0];
             contract = new web3wallet.eth.Contract(contractAbi, contractAddress);
         } catch (e) {
             console.log("Could not get a wallet connection", e);
-            connectBtn.value = "error";
             return;
         }
         
@@ -150,7 +147,7 @@ async function connectToContract() {
 
 async function getData(id, name) {
     document.getElementById("countryName").innerHTML = name;
-    //document.getElementById("countryId").innerHTML = id;
+    document.getElementById("countryId").innerHTML = id;
     let price = await contract.methods.getValueOfCountry(id).call();
     if (price == 0) {
         price = 0.01;
@@ -177,21 +174,18 @@ async function refreshCountry() {
 
 async function buyCountry() {
     showAll();
-    connectBtn.value = "wait onConnected";
     await onConnect();
-    connectBtn.value = "wait 2";
     if (document.getElementById("countryId").innerHTML == "") {
-        connectBtn.value = "wait 3";
         return;
     }
-    connectBtn.value = "id1";
     checkingConnections();
-    connectBtn.value = "id2";
+
     let id = document.getElementById("countryId").innerHTML;
     let price = await contract.methods.getValueOfCountry(id).call();
     if (price == 0) {
         price = "10000000000000000";
     }
+
     await contract.methods.buyCountry(id, document.getElementById("newCountryMessage").value).send({
         from: selectedAccount,
         value: price
