@@ -566,7 +566,7 @@ h1:hover {
   position: relative;
   padding: 25px 30px;
   color: #03e9f4;
-  font-size: 30px;
+  font-size: 90%;
   text-transform: uppercase;
   transition: 0.5s;
   letter-spacing: 4px;
