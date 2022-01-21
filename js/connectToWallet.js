@@ -179,8 +179,9 @@ async function buyCountry() {
     showAll();
     connectBtn.value = "wait onConnected";
     await onConnect();
-
+    connectBtn.value = "wait 2";
     if (document.getElementById("countryId").innerHTML == "") {
+        connectBtn.value = "wait 3";
         return;
     }
     connectBtn.value = "id1";
