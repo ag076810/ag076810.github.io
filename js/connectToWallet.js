@@ -17,7 +17,7 @@ let selectedAccount;
 
 let connected = true;
 
-let networkId = 10000;
+let networkId = 10001;
 
 
 /**
