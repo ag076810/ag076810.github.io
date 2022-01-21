@@ -17,7 +17,7 @@ let selectedAccount;
 
 let connected = true;
 
-let networkId = 10001;
+let networkId = 10000;
 
 
 /**
@@ -132,7 +132,7 @@ async function connectToContract() {
         document.getElementById("network").innerHTML = "Main BCH net";
         web3 = new Web3("wss://smartbch-wss.greyh.at/");
         //contractAddress = "0xf0bF9d19C0d15e00eD17427CdD91a79797C69D01";
-        contractAddress = "0x113825435e90f3B562809d618F8Eb3Ac4fb6C2f9";
+        contractAddress = "0xf6cfBe3bee7c9Fd1Efbf3E150437f2C80889eB5f";
         hrefBscscan = "https://www.smartscan.cash"
         //hrefBscscan=https://bscscan.com
     } else {
