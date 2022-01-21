@@ -180,13 +180,12 @@ async function buyCountry() {
     connectBtn.value = "wait onConnected";
     await onConnect();
 
-    connectBtn.value = "id";
-
     if (document.getElementById("countryId").innerHTML == "") {
         return;
     }
+    connectBtn.value = "id1";
     checkingConnections();
-
+    connectBtn.value = "id2";
     let id = document.getElementById("countryId").innerHTML;
     let price = await contract.methods.getValueOfCountry(id).call();
     if (price == 0) {
