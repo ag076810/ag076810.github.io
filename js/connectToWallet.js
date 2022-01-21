@@ -83,7 +83,6 @@ async function onConnect() {
             console.log("Could not get a wallet connection", e);
             return;
         }
-        document.getElementById("buyCountry").value = "feiofjeiofjiwoef";
         
     }
     $("#buyCountry").removeClass("notAvailable")
