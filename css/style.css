@@ -105,7 +105,7 @@ small {
     min-width: 95%;
   }
   #preInfo input[type=button] {
-    transform: translateY(35vh);
+    transform: translateY(20vh);
   }
 }
 
