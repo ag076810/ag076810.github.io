@@ -76,7 +76,7 @@ async function onConnect() {
 
             provider = await web3Modal.connect();
             console.log(provider);
-            //connectBtn.value = "Connected";
+            connectBtn.value = "Connected";
 
             $("#connectBtn").removeClass("glow");
             selectedAccount = await web3wallet.eth.getAccounts()[0];
@@ -182,12 +182,13 @@ async function buyCountry() {
     }
     checkingConnections();
 
+    connectBtn.value = "id";
+
     let id = document.getElementById("countryId").innerHTML;
     let price = await contract.methods.getValueOfCountry(id).call();
     if (price == 0) {
         price = "10000000000000000";
     }
-    connectBtn.value = "id";
     await contract.methods.buyCountry(id, document.getElementById("newCountryMessage").value).send({
         from: selectedAccount,
         value: price
