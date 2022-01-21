@@ -282,6 +282,18 @@ p{
   font-size: 2vh;
 }
 
+
+
+input[type=button], select, {
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: 3px solid black;
+  color: white;
+  box-sizing: border-box;
+  background-color: #AA5A9C;
+
+}
+
 input[type=button], select, textarea {
   padding: 18px 40px;
   border-radius: 50px;
