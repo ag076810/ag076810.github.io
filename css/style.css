@@ -282,9 +282,13 @@ p{
   font-size: 2vh;
 }
 
+input {
+    -webkit-appearance: none;  /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
+    -moz-appearance: none;     /* FireFox */
+    appearance: none;
+}
 
-
-input[type=button], select, {
+input[type=button], select, textarea{
   padding: 12px 20px;
   border-radius: 50px;
   border: 3px solid black;
@@ -294,7 +298,7 @@ input[type=button], select, {
 
 }
 
-input[type=button], select, textarea {
+input[type=button], select {
   padding: 18px 40px;
   border-radius: 50px;
   border: 3px solid black;
