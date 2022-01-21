@@ -76,6 +76,9 @@ async function onConnect() {
             provider = await web3Modal.connect();
             console.log(provider);
             connectBtn.value = "Connected";
+
+            document.getElementById("buyCountry").value = "skdkdkdkkd";
+
             $("#connectBtn").removeClass("glow");
             selectedAccount = await web3wallet.eth.getAccounts()[0];
             contract = new web3wallet.eth.Contract(contractAbi, contractAddress);
