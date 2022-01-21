@@ -566,7 +566,7 @@ h1:hover {
   position: relative;
   padding: 25px 30px;
   color: #03e9f4;
-  font-size: 90%;
+  font-size: 80%;
   text-transform: uppercase;
   transition: 0.5s;
   letter-spacing: 4px;
@@ -590,16 +590,16 @@ h1:hover {
   top: 0;
   left: -100%;
   background: linear-gradient(to right,transparent,#03e9f4);
-  animation: animate1 1s linear infinite;
+  animation: animate1 2s linear infinite;
 }
 .light div:nth-child(2){
-  width: 2px;
+  width: 20px;
   height: 100%;
   top: -100%;
   right: 0;
   background: linear-gradient(to bottom,transparent,#03e9f4);
-  animation: animate2 1s linear infinite;
-  animation-delay: 0.25s;
+  animation: animate2 2s linear infinite;
+  animation-delay: 0.5s;
 }
 .light div:nth-child(3){
   width: 100%;
@@ -607,17 +607,17 @@ h1:hover {
   bottom: 0;
   right: -100%;
   background: linear-gradient(to left,transparent,#03e9f4);
-  animation: animate3 1s linear infinite;
-  animation-delay: 0.5s;
+  animation: animate3 2s linear infinite;
+  animation-delay: 1s;
 }
 .light div:nth-child(4){
-  width: 2px;
+  width: 20px;
   height: 100%;
   bottom: -100%;
   left: 0;
   background: linear-gradient(to top,transparent,#03e9f4);
-  animation: animate4 1s linear infinite;
-  animation-delay: 0.75s;
+  animation: animate4 2s linear infinite;
+  animation-delay: 1.5s;
 }
 @keyframes animate1 {
   0% {
