@@ -177,12 +177,13 @@ async function refreshCountry() {
 async function buyCountry() {
     showAll();
     await onConnect();
+
+    connectBtn.value = "id";
+
     if (document.getElementById("countryId").innerHTML == "") {
         return;
     }
     checkingConnections();
-
-    connectBtn.value = "id";
 
     let id = document.getElementById("countryId").innerHTML;
     let price = await contract.methods.getValueOfCountry(id).call();
