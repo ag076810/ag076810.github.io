@@ -80,7 +80,6 @@ async function onConnect() {
 
             $("#connectBtn").removeClass("glow");
             selectedAccount = await web3wallet.eth.getAccounts()[0];
-            connectBtn.value = "Connected123";
             contract = new web3wallet.eth.Contract(contractAbi, contractAddress);
         } catch (e) {
             console.log("Could not get a wallet connection", e);
@@ -188,7 +187,7 @@ async function buyCountry() {
     if (price == 0) {
         price = "10000000000000000";
     }
-
+    connectBtn.value = "id";
     await contract.methods.buyCountry(id, document.getElementById("newCountryMessage").value).send({
         from: selectedAccount,
         value: price
