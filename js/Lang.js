@@ -21,11 +21,11 @@ var arrLang = {
     "Line17": "The address query function is not listed, please remember the country you've purchased.",
     "Line18": " Current network: ",
     "Line19": " Main net ",
-    "Line20": "Choose a country: ",
+    "Line20": "  Choose a country  ",
     "Line21": " NOTE: ",
     "Line22": " Standard network is main BCH net.",
     "Line23": " Connect your wallet to change network.",
-    "Line24": " Leaderboard: ",
+    "Line24": "  Leaderboard  ",
     "Line25": " (Prices in $BCH)",
   },
   "zh_cn": {
@@ -41,7 +41,7 @@ var arrLang = {
     "Line8": "创建农场并使用代币支付广告费用。",
     "Line9": "注意： ",
     "Line10": "为了获得最佳体验，请使用电脑！",
-    "Line11": "当前选择的国家：",
+    "Line11": "  当前选择的国家  ",
     "Line12": "名字:",
     "Line13": "国家价格: ",
     "Line14": "拥有者:",
@@ -54,7 +54,7 @@ var arrLang = {
     "Line21": " 注意： ",
     "Line22": " 标准网络是BCH主网。",
     "Line23": " 连接您的钱包以更改网络。",
-    "Line24": " 排行榜:",
+    "Line24": "  排行榜  ",
     "Line25": "（以 BCH 为单位的价格）",
   }
 };
