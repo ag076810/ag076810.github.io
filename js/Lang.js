@@ -4,7 +4,7 @@ var arrLang = {
     "Line2": "This is a Decentralized Application (Dapp).",
     "Line2-1": "You can own countries/regions and display your message on them. The leaderboard shows the wealthiest countries/regions.",
     "Line3": "What's in it for me ?",
-    "Line4": "Once you own a country you're now the king of it. You message will be displayed on that country/region page.",
+    "Line4": "Once you own a country/region you're now the king of it. You message will be displayed on that country/region page.",
     "Line4-1": "Every time a country/region is purchased, the price increases 20%. If someone purchases your country/region, you get your BCH back plus extra 10%.",
     "Line5": "Roadmap ?",
     "Line6": "Not yet. Billboard rental function may be introduced in the future. Currently only the message board function.",
