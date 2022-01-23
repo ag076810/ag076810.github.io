@@ -23,7 +23,7 @@ var arrLang = {
     "Line19": " Main net ",
     "Line20": "  Choose a country/region  ",
     "Line21": " NOTE: ",
-    "Line22": " Standard network is main BCH net.",
+    "Line22": " Standard network is smartBCH Mainnet.",
     "Line23": " Connect your wallet to change network.",
     "Line24": "  Leaderboard  ",
     "Line25": " (Prices in $BCH)",
