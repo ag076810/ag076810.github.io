@@ -27,6 +27,10 @@ var arrLang = {
     "Line23": " Connect your wallet to change network.",
     "Line24": "  Leaderboard  ",
     "Line25": " (Prices in $BCH)",
+    "Line26": " ★ ",
+    "Line27": "BCH will be transfered to your address immediately if someone purchase your Country/Region. However, the transfer record will not show on smartscan.",
+    "Line28": " ★ ",
+    "Line29": "We have confirmed that SBCH addresss is able to recieve BCH. Please do not purchase if there's any concern. We will fix this issue in the future.",
   },
   "zh_cn": {
     "Line1": "这是什么 ?",
@@ -56,6 +60,10 @@ var arrLang = {
     "Line23": " 连接您的钱包以更改网络。",
     "Line24": "  排行榜  ",
     "Line25": "（以 BCH 为单位的价格）",
+    "Line26": " ★ ",
+    "Line27": "如果有人购买您的国家/地区，BCH 将立即转移到您的地址。但是，转移记录不会显示在smartscan上。",
+    "Line28": " ★ ",
+    "Line29": "我们已经确认SBCH地址能够接收BCH，如果有任何顾虑，请不要购买。我们将在未来解决这个问题。",
   }
 };
 
